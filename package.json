@@ -1,0 +1,30 @@
+{
+  "name": "iron-plan",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Muscle and weight-gain training companion: workouts, weight tracking, nutrition.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "deploy": "npm run build && npx wrangler deploy"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.2.0",
+    "@fontsource-variable/figtree": "^5.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^5.2.0",
+    "typescript": "^5.6.3",
+    "vite": "^7.3.7"
+  }
+}

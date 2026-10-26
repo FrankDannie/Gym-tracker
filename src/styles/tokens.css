@@ -1,0 +1,121 @@
+:root {
+  --font-display: "Archivo Variable", "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Figtree Variable", "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --paper: #eef1f4;
+  --surface: #ffffff;
+  --surface-2: #f5f7f9;
+  --ink: #18202b;
+  --ink-2: #485364;
+  --ink-3: #5c6776;
+  --line: #dde2e9;
+  --line-strong: #c2cad5;
+  --rubber: #141a22;
+
+  --blue: #2e5bce;
+  --blue-strong: #2a52bd;
+  --blue-soft: #e4ebfb;
+  --red: #d13b35;
+  --red-strong: #c2332d;
+  --red-soft: #fbe7e6;
+  --green: #1f8f57;
+  --green-strong: #17794a;
+  --green-soft: #dff3e8;
+  --amber: #b87a00;
+  --amber-soft: #fbefd0;
+  --steel: #7d8898;
+  --steel-strong: #3c4756;
+  --steel-soft: #e8ecf1;
+
+  --focus: #2e5bce;
+
+  --r-s: 8px;
+  --r-m: 14px;
+  --r-l: 24px;
+
+  --shadow-float: 0 10px 30px rgb(20 26 34 / 0.18), 0 2px 6px rgb(20 26 34 / 0.1);
+
+  --tab-h: 64px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --paper: #11151a;
+  --surface: #192028;
+  --surface-2: #1f2832;
+  --ink: #eef1f5;
+  --ink-2: #b4bdca;
+  --ink-3: #8a95a5;
+  --line: #2a333e;
+  --line-strong: #3b4654;
+  --rubber: #0a0d11;
+
+  --blue: #7b9bf2;
+  --blue-soft: #1f2c4d;
+  --red: #f26d67;
+  --red-soft: #4a2220;
+  --green: #45c48a;
+  --green-soft: #17382a;
+  --amber: #f0bd4b;
+  --amber-soft: #43340f;
+  --steel: #98a3b3;
+  --steel-soft: #263039;
+
+  --focus: #9db4f7;
+  --shadow-float: 0 10px 30px rgb(0 0 0 / 0.5), 0 2px 6px rgb(0 0 0 / 0.4);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11151a;
+    --surface: #192028;
+    --surface-2: #1f2832;
+    --ink: #eef1f5;
+    --ink-2: #b4bdca;
+    --ink-3: #8a95a5;
+    --line: #2a333e;
+    --line-strong: #3b4654;
+    --rubber: #0a0d11;
+
+    --blue: #7b9bf2;
+    --blue-soft: #1f2c4d;
+    --red: #f26d67;
+    --red-soft: #4a2220;
+    --green: #45c48a;
+    --green-soft: #17382a;
+    --amber: #f0bd4b;
+    --amber-soft: #43340f;
+    --steel: #98a3b3;
+    --steel-soft: #263039;
+
+    --focus: #9db4f7;
+    --shadow-float: 0 10px 30px rgb(0 0 0 / 0.5), 0 2px 6px rgb(0 0 0 / 0.4);
+    color-scheme: dark;
+  }
+}
+
+/* Session colours follow plate colour-coding: blue upper, red legs, green cardio, steel recovery. */
+[data-kind="upper"] {
+  --accent: var(--blue);
+  --accent-strong: var(--blue-strong);
+  --accent-soft: var(--blue-soft);
+}
+[data-kind="legs"] {
+  --accent: var(--red);
+  --accent-strong: var(--red-strong);
+  --accent-soft: var(--red-soft);
+}
+[data-kind="cardio"] {
+  --accent: var(--green);
+  --accent-strong: var(--green-strong);
+  --accent-soft: var(--green-soft);
+}
+[data-kind="recovery"] {
+  --accent: var(--steel);
+  --accent-strong: var(--steel-strong);
+  --accent-soft: var(--steel-soft);
+}

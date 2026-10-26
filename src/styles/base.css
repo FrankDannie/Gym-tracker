@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--safe-t) + 72px);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  color: inherit;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- type scale (major third on 16px) ---------- */
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 70;
+  font-weight: 800;
+  letter-spacing: -0.005em;
+  line-height: 0.98;
+}
+.t-xl {
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+}
+.t-lg {
+  font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+}
+/* Condensed width is for big type only; small headings use the normal width so word gaps stay readable. */
+.t-md,
+.t-sm {
+  font-variation-settings: "wdth" 100;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.t-md {
+  font-size: 1.3125rem;
+  line-height: 1.2;
+}
+.t-sm {
+  font-size: 1.0625rem;
+  line-height: 1.25;
+}
+.muted {
+  color: var(--ink-2);
+}
+.faint {
+  color: var(--ink-3);
+}
+.small {
+  font-size: 0.875rem;
+}
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
